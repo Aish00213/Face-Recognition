@@ -1,0 +1,27 @@
+Video Capture Initialization:
+video_capture = cv2.VideoCapture(0): Initializes the webcam (camera index 0) for capturing video frames.
+
+Main Loop:
+The while True loop continuously captures frames from the webcam.
+ret, frames = video_capture.read(): Reads the next video frame. ret indicates whether the frame was successfully read, and frames contains the image data.
+
+Preprocessing:
+gray = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY): Converts the color image to grayscale. Face detection often works better with grayscale images.
+
+Face Detection:
+faces = faceCascade.detectMultiScale(...): Detects faces in the grayscale frame.
+faceCascade is assumed to be a pre-trained face detection classifier (e.g., Haar Cascade).
+Parameters like scaleFactor, minNeighbors, and minSize control the face detection process.
+Detected faces are stored in the faces variable as rectangles (x, y, width, height).
+
+Drawing Rectangles:
+A green rectangle is drawn around each detected face using cv2.rectangle(...).
+The (x, y) coordinates specify the top-left corner, and (x+w, y+h) specify the bottom-right corner of the rectangle.
+
+Displaying the Result:
+cv2.imshow('Video', frames): Displays the frame with rectangles around detected faces.
+Press ‘q’ to exit the video stream.
+
+Cleanup:
+video_capture.release(): Releases the webcam.
+cv2.destroyAllWindows(): Closes all OpenCV windows.
