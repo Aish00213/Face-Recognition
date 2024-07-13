@@ -1,21 +1,22 @@
 Face Recognition with OpenCV
-Overview
+
+Overview: 
 This project captures real-time video from the webcam, detects faces, and draws rectangles around them. It serves as a basic face recognition system using OpenCV.
 
-Features
+Features: 
 Real-time face detection
 Simple rectangle visualization around detected faces
 Press ‘q’ to exit the video stream
 
-Requirements
+Requirements: 
 Python 3.x
 OpenCV (install via pip install opencv-python)
 
-Usage
+Usage: 
 Clone this repository.
 Run the script: python face_recognition.py
 Observe the video stream with face detection.
 
-Future Enhancements
+Future Enhancements: 
 Integrate face recognition models for identification.
 Improve accuracy and performance.
